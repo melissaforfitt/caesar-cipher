@@ -33,16 +33,15 @@ public class Encryption {
 
 	public static void main(String[] args) {
 
-		int key;
-
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the plaintext:");
 		plaintext = scan.nextLine();
 		System.out.println("Enter the key:");
-		key = scan.nextInt();
+		int key = scan.nextInt() + 1;
 
 		String encrypted = encrypt(plaintext, key);
 		String decrypted = decrypt(ciphertext, key);
+
 		System.out.println("Encrypted word is: " + encrypted);
 		System.out.println("Decrypted word is: " + decrypted);
 
